@@ -15,7 +15,7 @@
                 <td><%= player.last_name %></td>
                 <td>
                     <%= link_to "Show Profile", player_path(player.id) %> |
-                    <%= link_to "Edit Profile", player_edit_path(player.id) %> |
+                    <%= link_to "Edit Profile", edit_player_path(player.id) %> |
                     <%= link_to "Delete Profile", player_path(player.id), data:{ method: :delete, confirm: "Are you sure?" } %>
                 </td>               
             </tr>
@@ -23,4 +23,4 @@
     </tbody>
 </table>
 
-<%= link_to "New Player", players_new_path %>
+<%= link_to "New Player", new_player_path %> | <%= link_to "Log Out", "/log_out" %>
